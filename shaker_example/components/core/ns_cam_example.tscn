@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bkn36xbf72g2e"]
 
 [ext_resource type="Texture2D" uid="uid://chd3180joggfl" path="res://shaker_example/assets/globs_no_outline.png" id="1_lxahy"]
-[ext_resource type="Script" uid="uid://cto31nwefigsm" path="res://addons/shaker/components/core/ns_cam/ns_cam.gd" id="2_ubjt2"]
+[ext_resource type="Script" uid="uid://cto31nwefigsm" path="res://addons/shaker/core/ns_cam/ns_cam.gd" id="2_ubjt2"]
 
 [node name="NsCamExample" type="Node2D"]
 

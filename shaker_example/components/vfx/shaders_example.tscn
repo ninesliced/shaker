@@ -1,11 +1,11 @@
 [gd_scene load_steps=14 format=3 uid="uid://bqhqpdwq6n82"]
 
-[ext_resource type="Shader" uid="uid://b02bw466pwk5a" path="res://addons/shaker/components/vfx/shaders/outline.gdshader" id="1_3a7qo"]
+[ext_resource type="Shader" uid="uid://b02bw466pwk5a" path="res://addons/shaker/vfx/shaders/outline.gdshader" id="1_3a7qo"]
 [ext_resource type="Texture2D" uid="uid://chd3180joggfl" path="res://shaker_example/assets/globs_no_outline.png" id="1_hge2o"]
-[ext_resource type="Shader" uid="uid://birv8v71nvo3v" path="res://addons/shaker/components/vfx/shaders/fill_color.gdshader" id="3_hppum"]
-[ext_resource type="Shader" uid="uid://c20777cq41qi6" path="res://addons/shaker/components/ui/transition_manager/diamond_transition.gdshader" id="4_xckxh"]
-[ext_resource type="Shader" uid="uid://cp22pnkfbw2yh" path="res://addons/shaker/components/ui/transition_manager/circle.gdshader" id="5_vtbeg"]
-[ext_resource type="Shader" uid="uid://dbmbun1t7tan3" path="res://addons/shaker/components/ui/transition_manager/shaders_example.gdshader" id="6_wckwq"]
+[ext_resource type="Shader" uid="uid://birv8v71nvo3v" path="res://addons/shaker/vfx/shaders/fill_color.gdshader" id="3_hppum"]
+[ext_resource type="Shader" uid="uid://c20777cq41qi6" path="res://addons/shaker/ui/transition_manager/diamond_transition.gdshader" id="4_xckxh"]
+[ext_resource type="Shader" uid="uid://cp22pnkfbw2yh" path="res://addons/shaker/ui/transition_manager/circle.gdshader" id="5_vtbeg"]
+[ext_resource type="Shader" uid="uid://dbmbun1t7tan3" path="res://addons/shaker/ui/transition_manager/shaders_example.gdshader" id="6_wckwq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hppum"]
 shader = ExtResource("1_3a7qo")

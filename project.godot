@@ -17,9 +17,9 @@ config/icon="res://src/icon.svg"
 
 [autoload]
 
-TransitionManager="*res://addons/shaker/components/ui/transition_manager/transition_manager.tscn"
-UIManager="*res://addons/shaker/components/ui/ui_manager/ui_manager.tscn"
-PauseManager="*res://addons/shaker/components/core/pause_manager/pause_manager.tscn"
+TransitionManager="*res://addons/shaker/ui/transition_manager/transition_manager.tscn"
+UIManager="*res://addons/shaker/ui/ui_manager/ui_manager.tscn"
+PauseManager="*res://addons/shaker/core/pause_manager/pause_manager.tscn"
 
 [editor_plugins]
 
@@ -29,11 +29,11 @@ enabled=PackedStringArray("res://addons/shaker/plugin.cfg")
 
 folder_colors={
 "res://addons/shaker/": "green",
-"res://addons/shaker/components/": "gray",
-"res://addons/shaker/components/core/": "purple",
-"res://addons/shaker/components/gameplay/": "orange",
-"res://addons/shaker/components/ui/": "teal",
-"res://addons/shaker/components/vfx/": "pink",
+"res://addons/shaker/core/": "purple",
+"res://addons/shaker/gamejam/": "gray",
+"res://addons/shaker/gameplay/": "orange",
+"res://addons/shaker/ui/": "teal",
+"res://addons/shaker/vfx/": "pink",
 "res://shaker_example/components/": "gray",
 "res://shaker_example/components/core/": "purple",
 "res://shaker_example/components/gameplay/": "orange",

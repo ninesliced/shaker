@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=3 uid="uid://kvf06xb5r4o0"]
 
-[ext_resource type="Script" uid="uid://d4amcuden16uu" path="res://addons/shaker/components/ui/transition_manager/transition_manager.gd" id="1_j74jm"]
-[ext_resource type="Shader" uid="uid://dbmbun1t7tan3" path="res://addons/shaker/components/ui/transition_manager/shaders_example.gdshader" id="2_tqw0h"]
-[ext_resource type="Shader" uid="uid://cp22pnkfbw2yh" path="res://addons/shaker/components/ui/transition_manager/circle.gdshader" id="3_iralm"]
+[ext_resource type="Script" uid="uid://d4amcuden16uu" path="res://addons/shaker/ui/transition_manager/transition_manager.gd" id="1_j74jm"]
+[ext_resource type="Shader" uid="uid://dbmbun1t7tan3" path="res://addons/shaker/ui/transition_manager/shaders_example.gdshader" id="2_tqw0h"]
+[ext_resource type="Shader" uid="uid://cp22pnkfbw2yh" path="res://addons/shaker/ui/transition_manager/circle.gdshader" id="3_iralm"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_iralm"]
 shader = ExtResource("2_tqw0h")
