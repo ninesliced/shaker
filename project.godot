@@ -30,7 +30,6 @@ enabled=PackedStringArray("res://addons/shaker/plugin.cfg")
 folder_colors={
 "res://addons/shaker/": "green",
 "res://addons/shaker/core/": "purple",
-"res://addons/shaker/gamejam/": "gray",
 "res://addons/shaker/gameplay/": "orange",
 "res://addons/shaker/ui/": "teal",
 "res://addons/shaker/vfx/": "pink",

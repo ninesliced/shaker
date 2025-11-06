@@ -13,7 +13,6 @@ func shake(intensity: float = 10.0, fade: float = 5.0, threshold: float = 2.0) -
 func _process(delta: float) -> void:
 	if _shake_force > _shake_threshold:
 		_shake_force = lerp(_shake_force, 0.0, delta * _shake_fade)
-		print(_shake_force)
 		offset = Vector2(
 			randf_range(-_shake_force, _shake_force),
 			randf_range(-_shake_force, _shake_force)
