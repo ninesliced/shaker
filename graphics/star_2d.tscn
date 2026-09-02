@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bjc7xwpwgvx7r"]
+
+[ext_resource type="Script" uid="uid://c30a75mfm243v" path="res://addons/shaker/graphics/star_2d.gd" id="1_a2y5l"]
+
+[sub_resource type="Curve" id="Curve_a2y5l"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.5115154, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[node name="Star2D" type="Polygon2D" unique_id=775935234]
+polygon = PackedVector2Array(-29.774628, 10.594404, -17.782284, 13.687559, -18.61171, 27.168041, -6.545399, 22.220121, 0.8427497, 30.426395, 7.3138785, 20.554993, 19.191603, 24.9329, 19.208479, 13.1589365, 31.966597, 9.416421, 25.422121, -0.70414054, 28.395216, -10.103582, 20.242577, -15.581324, 17.846935, -26.05169, 7.2537503, -24.624823, -0.92278457, -33.316055, -7.4688425, -20.990517, -18.857828, -24.499268, -20.090256, -13.7630005, -32.028713, -9.434722, -22.320494, 0.6182343)
+script = ExtResource("1_a2y5l")
+peak_randomness = 0
+low_radius = 23.74
+high_radius = 32.0
+scale_profile = SubResource("Curve_a2y5l")
