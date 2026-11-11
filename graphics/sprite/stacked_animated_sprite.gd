@@ -99,6 +99,8 @@ func _ready() -> void:
 	reference_sprite.animation_looped.connect(func(): animation_looped.emit())
 	reference_sprite.frame_changed.connect(func(): frame_changed.emit())
 	reference_sprite.sprite_frames_changed.connect(func(): sprite_frames_changed.emit())
+	
+	_run_for_all_children(func(spr: AnimatedSprite2D): spr.material = material)
 
 
 func _process(delta: float) -> void:
@@ -155,12 +157,10 @@ func _run_for_all_nonref_children(f: Callable):
 
 
 func _sync_children():
-	print("Syncing StackedAnimatedSprite children...")
 	_run_for_all_children(func(spr: AnimatedSprite2D):
 		if spr.name == reference_sprite.name:
 			return
 		
-		print("- Syncing " + spr.name)
 		spr.speed_scale = reference_sprite.speed_scale
 		spr.centered = reference_sprite.centered
 		spr.offset = reference_sprite.offset
@@ -201,4 +201,3 @@ func _sync_children():
 		
 		spr.queue_redraw()
 	)
-	print("Syncing StackedAnimatedSprite children done.")

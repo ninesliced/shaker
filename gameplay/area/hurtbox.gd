@@ -6,20 +6,23 @@ class_name Hurtbox
 ## Whether to ignore sibling hitboxes. 
 @export var ignore_sibling_hitboxes := true
 
+
+@export var enabled: bool = true :
+	set(value):
+		enabled = value
+		monitorable = value
+
 ## Emitted when entered in collision with a hitbox.
 signal hitbox_entered(area: Hitbox)
 signal hitbox_exited(area: Hitbox)
 
 
-func on_hitbox_entered(hitbox: Hitbox):
+func on_hitbox_entered(hitbox: Hitbox) -> bool:
 	if not is_hittable(hitbox):
-		return
+		return false
 	
 	hitbox_entered.emit(hitbox)
-
-
-func process_overlapping_hitbox(hitbox: Hitbox):
-	pass
+	return true
 
 
 func on_hitbox_exited(hitbox: Hitbox):
@@ -30,3 +33,11 @@ func is_hittable(hitbox: Hitbox):
 	if ignore_sibling_hitboxes and hitbox.get_parent() == get_parent():
 		return false
 	return true
+
+
+func disable() -> void:
+	enabled = false
+
+
+func enable() -> void:
+	enabled = true
