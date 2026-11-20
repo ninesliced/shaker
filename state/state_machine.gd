@@ -3,12 +3,10 @@ class_name StateMachine
 
 @export var default_state: StringName = ""
 
-# dev note: this needs to be an @export in order to be able to be accessed by children states from _ready.
-var entity: Entity
-
-var _states = []
 var current_state_name: StringName
 var current_state: AbstractState = null
+
+var _states = []
 
 # TODO change this to use _states, that should be turned into a Dictionary[StringName, AbstractState]
 
@@ -23,7 +21,7 @@ func _ready() -> void:
 		travel_to(default_state)
 
 
-func travel_to(state_name: StringName, params: Dictionary = {}):
+func travel_to(state_name: StringName, params: Dictionary = {}) -> void:
 	var node = get_node_or_null(str(state_name))
 	assert(node, "Invalid state: '" + str(state_name) + "'")
 	assert(node is AbstractState, "Node '" + str(state_name) + "' isn't an AbstractState")

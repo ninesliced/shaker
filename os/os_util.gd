@@ -13,3 +13,13 @@ static func parse_cmd_args() -> Dictionary:
 			arguments[argument.trim_prefix("--")] = ""
 	
 	return arguments
+
+
+static func get_system_username():
+	if OS.has_environment("USER"):
+		return OS.get_environment("USER")
+	elif OS.has_environment("USERNAME"):
+		return OS.get_environment("USERNAME")
+	else:
+		var id = OS.get_unique_id()
+		return "Player_" + id.substr(0, 6)

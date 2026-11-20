@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://vj3wo05qw4el"]
+
+[ext_resource type="Script" uid="uid://bgy1lm7nnyjcf" path="res://addons/shaker/gameplay/2d/actor/actor_2d.gd" id="1_k4u8i"]
+[ext_resource type="Script" uid="uid://drpttt3optl3r" path="res://addons/shaker/state/state_machine.gd" id="2_kq3qb"]
+
+[node name="Actor2D" type="CharacterBody2D" unique_id=1381843015]
+script = ExtResource("1_k4u8i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2048618765]
+
+[node name="StateMachine" type="Node" parent="." unique_id=1302805632]
+script = ExtResource("2_kq3qb")
+metadata/_custom_type_script = "uid://drpttt3optl3r"

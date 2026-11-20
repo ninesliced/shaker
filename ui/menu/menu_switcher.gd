@@ -1,3 +1,4 @@
+@icon("./menu_switcher.svg")
 class_name MenuSwitcher
 extends Control
 

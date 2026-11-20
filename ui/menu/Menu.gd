@@ -1,4 +1,5 @@
 @abstract
+@icon("./menu.svg")
 class_name Menu
 extends Control
 

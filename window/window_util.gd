@@ -28,6 +28,14 @@ static func dock_window_to_quarter(quarter: Quarter, window: Window):
 			window.position = usable_rect.position + quarter_size
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+static func setup_multi_window(window: Window):
+	var arguments = OSUtil.parse_cmd_args()
+	if arguments.has("window"):
+		if arguments["window"] == "0":
+			WindowUtil.dock_window_to_quarter(WindowUtil.QUARTER_TOPLEFT, window)
+		elif arguments["window"] == "1":
+			WindowUtil.dock_window_to_quarter(WindowUtil.QUARTER_TOPRIGHT, window)
+		elif arguments["window"] == "2":
+			WindowUtil.dock_window_to_quarter(WindowUtil.QUARTER_BOTLEFT, window)
+		elif arguments["window"] == "3":
+			WindowUtil.dock_window_to_quarter(WindowUtil.QUARTER_BOTRIGHT, window)

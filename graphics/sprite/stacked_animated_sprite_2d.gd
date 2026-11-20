@@ -1,8 +1,8 @@
 @tool
-@icon("./stacked_animated_sprite.svg")
+@icon("./stacked_animated_sprite_3d.svg")
 ## Acts like an AnimatedSprite2D, but may contain mutliple layers, represented
 ## by its children.
-class_name StackedAnimatedSprite
+class_name StackedAnimatedSprite2D
 extends Node2D
 
 ## The AnimatedSprite2D used as a reference for all the other layers.
