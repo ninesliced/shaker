@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://dqhf37osl184r"]
+
+[ext_resource type="Script" uid="uid://d1w8pq0ywv3f7" path="res://addons/shaker/templates/first_person_player.gd" id="1_ylb1t"]
+[ext_resource type="Script" uid="uid://dhmskjubm4tfs" path="res://addons/shaker/gameplay/3d/interaction_ray_cast_3d.gd" id="2_sbul2"]
+[ext_resource type="Script" uid="uid://drpttt3optl3r" path="res://addons/shaker/state/state_machine.gd" id="3_082o8"]
+[ext_resource type="Script" uid="uid://bpqjpkhit0v31" path="res://addons/shaker/state/state.gd" id="4_itcrh"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_eqtho"]
+radius = 0.384
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_x88lx"]
+radius = 0.38427734
+
+[node name="Player" type="CharacterBody3D" unique_id=355180063]
+script = ExtResource("1_ylb1t")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=173763570]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_eqtho")
+debug_color = Color(1, 0.9166666, 0, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2101477295]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_x88lx")
+
+[node name="Head" type="Node3D" parent="." unique_id=1033080979]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5045354, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Head" unique_id=1051866927]
+current = true
+
+[node name="CameraRaycast" type="RayCast3D" parent="Head" unique_id=1186727209]
+target_position = Vector3(0, 0, -6)
+collide_with_areas = true
+script = ExtResource("2_sbul2")
+metadata/_custom_type_script = "uid://dhmskjubm4tfs"
+
+[node name="SpawnMarker" type="Marker3D" parent="Head" unique_id=52702600]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.2020259)
+
+[node name="StateMachine" type="Node" parent="." unique_id=1238354876]
+script = ExtResource("3_082o8")
+default_state = &"Moving"
+metadata/_custom_type_script = "uid://drpttt3optl3r"
+
+[node name="Moving" type="Node" parent="StateMachine" unique_id=115416958]
+script = ExtResource("4_itcrh")
+metadata/_custom_type_script = "uid://bpqjpkhit0v31"

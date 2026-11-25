@@ -1,4 +1,4 @@
-class_name Pickupable
+#class_name Pickupable
 extends RigidBody3D
 
 @onready var interaction_area: InteractionArea3D = $InteractionArea3D

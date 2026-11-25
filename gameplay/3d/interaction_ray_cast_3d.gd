@@ -1,3 +1,4 @@
+@icon("./interaction_ray_cast_3d.svg")
 class_name InteractionRayCast3D
 extends RayCast3D
 
