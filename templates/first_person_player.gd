@@ -50,12 +50,12 @@ func _input(event: InputEvent) -> void:
 		head.rotation.x = clamp(head.rotation.x, -PI/2, PI/2)
 		_apply_y_rot_constraint()
 	
-	if event.is_action_pressed("interact"):
+	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
 		var obj = camera_raycast.target_area
 		if obj:
 			_on_interact(obj)
 	
-	if event.is_action_released("interact"):
+	if event is InputEventMouseButton and event.is_released() and event.button_index == MOUSE_BUTTON_LEFT:
 		camera_raycast.end_interact()
 		interacted_object = null
 

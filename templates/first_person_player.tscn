@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://d1w8pq0ywv3f7" path="res://addons/shaker/templates/first_person_player.gd" id="1_ylb1t"]
 [ext_resource type="Script" uid="uid://dhmskjubm4tfs" path="res://addons/shaker/gameplay/3d/interaction_ray_cast_3d.gd" id="2_sbul2"]
 [ext_resource type="Script" uid="uid://drpttt3optl3r" path="res://addons/shaker/state/state_machine.gd" id="3_082o8"]
-[ext_resource type="Script" uid="uid://bpqjpkhit0v31" path="res://addons/shaker/state/state.gd" id="4_itcrh"]
+[ext_resource type="Script" uid="uid://dahdhqyao66ek" path="res://addons/shaker/templates/first_person_player_state_moving.gd" id="4_ylb1t"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_eqtho"]
 radius = 0.384
@@ -44,5 +44,5 @@ default_state = &"Moving"
 metadata/_custom_type_script = "uid://drpttt3optl3r"
 
 [node name="Moving" type="Node" parent="StateMachine" unique_id=115416958]
-script = ExtResource("4_itcrh")
+script = ExtResource("4_ylb1t")
 metadata/_custom_type_script = "uid://bpqjpkhit0v31"
